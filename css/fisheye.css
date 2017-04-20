@@ -1,0 +1,138 @@
+input:focus,select:focus,textarea:focus,button:focus {
+    outline:  none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	position: relative;
+	padding: 15px;
+}
+
+#bigAssBg {
+	position: fixed;
+	background-image: url(http://www.spacetelescope.org/static/archives/images/screen/heic0701h.jpg);
+	width: 100%;
+	height: 100%;
+}
+
+#people {
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	width: 300px;
+}
+
+#people li {
+	background: white;
+	position: relative;
+	height: 50px;
+	margin-bottom: 6px;
+	box-shadow: black 0 0 14px 4px;
+
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+
+}
+
+#people li.selected {
+	z-index: 551 !important;
+	transition: transform 0.3s !important;
+	transform: scale(1.5) !important;
+}
+
+#people li.selected button {
+	font-size: 20px;
+}
+
+#shadow {
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 549;
+
+	display: none;
+}
+
+.infoBox {
+	background: white;
+	position: absolute;
+	width: 250px;
+	display: none;
+	z-index: 550;
+	padding: 5px;
+	transition: transform 0.3s;
+	height: 40px;
+	overflow: hidden;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: 30px;
+}
+
+.infoBox p {
+	color: gray;
+}
+
+.infoBox p span {
+	color: black;
+}
+
+.infoBox.shown {
+	height: 120px;
+	transform: translateY(50px);
+	-webkit-transform: translateY(50px);
+}
+
+#people img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+	height: 50px;
+}
+
+#people .name {
+	position: absolute;
+	left: 60px;
+	top: 3px;
+	font-size: 18px;
+}
+
+#people .userName {
+	position: absolute;
+	left: 60px;
+	top: 23px;
+	color: gray;
+}
+
+#people button {
+	position: absolute;
+	width: 50px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 44px;
+	font-size: 30px;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+#people button::after {
+	content: '\00bb';
+}
+
+#people li.selected button::after{
+	content: '\03a7';
+}
